@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Pre-Build Stage') {
       steps {
-        withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'e4e458ba-8178-4cc7-af47-cbd9046e76ce', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+        withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding', credentialsId: '099a327e-f6c8-4328-bf3a-42f0e7d27f91', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
           sh '''
           echo "Setting Environment Variables Stage"
           export AWS_REGION=${JENKINS_AWS_REGION}
